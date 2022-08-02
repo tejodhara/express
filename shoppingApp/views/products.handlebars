@@ -1,0 +1,35 @@
+<table class="table" >
+  <thead>
+    <tr>
+      <th scope="col">Id</th>
+      <th scope="col">Name</th>
+      <th scope="col">Description</th>
+      <th scope="col">Price</th>
+      <th scope="col" colspan="2" style="text-align: center;"> 
+        <form action="/addProducts" method="post"> 
+            <button type="submit" class="btn btn-primary">Add</button>
+        </form>
+      </th>
+    </tr>
+  </thead>
+  <tbody>
+    {{#each products}}  
+        <tr>
+            <th scope="row">{{_id}}</th>
+            <td>{{pName}}</td>
+            <td>{{pDesc}}</td>
+            <td>{{pPrice}}</td>
+            <td>
+                <form action="/products/edit-Products/{{_id}}" method="get">
+                    <button type="submit" class="btn btn-primary">Edit</button>
+                </form>
+            </td>
+            <td>
+                <form action="/products/delete-Products/{{_id}}" method="get">
+                    <button type="submit" class="btn btn-danger">Delete</button>
+                </form>
+            </td>
+        </tr>
+    {{/each}}
+  </tbody>
+</table>
