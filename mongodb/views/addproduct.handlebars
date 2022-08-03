@@ -1,0 +1,41 @@
+<form action="/products/product/add" method="POST">
+  <div style="display:grid; place-items: center; ">
+    {{! <div class="mb-3 " style="width:50%">
+        <label for="formGroupExampleInput"  class="form-label">Id</label>
+        <input type="text" class="form-control" name="_id" id="formGroupExampleInput" placeholder="Id">
+    </div> }}
+    <div class="mb-3" style="width:50%">
+      <label for="formGroupExampleInput" class="form-label">Name</label>
+      <input
+        type="text"
+        class="form-control"
+        name="pName"
+        id="pName"
+        placeholder="pName"
+      />
+    </div>
+    <div class="mb-3" style="width:50%">
+      <label for="formGroupExampleInput2" class="form-label">Description</label>
+      <input
+        type="text"
+        class="form-control"
+        name="pDesc"
+        id="pDesc"
+        placeholder="Description"
+      />
+    </div>
+    <div class="mb-3" style="width:50%">
+      <label for="formGroupExampleInput2" class="form-label">Price</label>
+      <input
+        type="text"
+        class="form-control"
+        name="pPrice"
+        id="pPrice"
+        placeholder="Price"
+      />
+    </div>
+    <div>
+      <button type="submit" class="btn btn-primary">Submit</button>
+    </div>
+  </div>
+</form>

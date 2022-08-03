@@ -88,12 +88,10 @@ app.post('/products/edit-Products',(req,res)=>{
 // delete
 app.get('/products/delete-Products/:_id',(req,res)=>{
     console.log(req.params._id);
-    const index = products.findIndex((products)=>{
-        return parseInt(products._id) === parseInt(req.params._id)
-    })
-    console.log('delete', index);
-    products.splice(products[index],0)
-    // res.redirect('/products')
+    const deleteIndex = products.findIndex((val)=>val._id === req.params._id)
+    console.log('delete', deleteIndex);
+    products.splice(deleteIndex,1)
+    res.redirect('/products')
 })
 
 app.listen(port,()=>{
